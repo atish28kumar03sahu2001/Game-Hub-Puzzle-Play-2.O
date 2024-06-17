@@ -1,0 +1,138 @@
+:root {
+    --size: 100px;
+    --tile: rgb(14, 30, 122);
+    --correct: purple;
+}
+.GAME2 {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(18, 12, 31);
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+}
+.GBDY{
+    display: flex;
+    justify-content: center;
+}
+.SHD{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+}
+.SHDH1{
+    text-align: center;
+    text-wrap: wrap;
+    font-size: 30px;
+    color: rgb(18, 12, 31);
+}
+/* OVERLAY.JSX */
+.overlay{
+    border: 10px solid rgb(144,143,143);
+    pointer-events: none;
+    z-index: 20;
+}
+/* BOARD.JSX */
+.GameBoard {
+    position: relative;
+}
+.Board{
+    display: grid;
+    grid-template-columns: repeat(4,var(--size));
+    grid-template-rows: repeat(4,var(--size));
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    border: 10px solid rgb(144, 143, 143);
+    margin: 50px 20px;
+}
+.Boardd-Btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.BRDBTN{
+    border: 2px solid white;
+    outline: none;
+    width: 120px;
+    height: 40px;
+    background-color: purple;
+    color: white;
+    border-radius: 10px;
+}
+/*TILE.JSX*/
+.Tile{
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--tile);
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    transition: left .4s, top .4s;
+}
+.Tile.slot--0 {left: 0;top: 0;}
+.Tile.slot--1 {left: calc(var(--size));top: 0;}
+.Tile.slot--2 {left: calc(2 * var(--size));top: 0;}
+.Tile.slot--3 {left: calc(3 * var(--size));top: 0;}
+.Tile.slot--4 {left: 0; top: calc(var(--size));}
+.Tile.slot--5 {left: calc(var(--size));top: calc(var(--size));}
+.Tile.slot--6 {left: calc(2 * var(--size));top: calc(var(--size));}
+.Tile.slot--7 {left: calc(3 * var(--size));top: calc(var(--size));}
+.Tile.slot--8 {left: 0;top: calc(2 * var(--size));}
+.Tile.slot--9 {left: calc(var(--size));top: calc(2 * var(--size));}
+.Tile.slot--10 {left: calc(2 * var(--size));top: calc(2 * var(--size));}
+.Tile.slot--11 {left: calc(3 * var(--size));top: calc(2 * var(--size));}
+.Tile.slot--12 {left: 0;top: calc(3 * var(--size));}
+.Tile.slot--13 {left: calc(var(--size));top: calc(3 * var(--size));}
+.Tile.slot--14 {left: calc(2 * var(--size));top: calc(3 * var(--size));}
+.Tile.slot--15 {left: calc(3 * var(--size));top: calc(3 * var(--size));}
+.Tile.disabled {
+    pointer-events: none;
+    background-color: transparent;
+}
+.Tile.correct {
+    background-color: var(--correct);
+}
+.Winner{
+    position: absolute;
+    background-color: var(--tile);
+    border-radius: 10px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 100;
+}
+
+@media screen and (width <= 500px) {
+    :root {
+        --size: 90px;
+    }
+    .overlay{
+        border: 8px solid rgb(144,143,143);
+    }
+    .Board{
+        border: 8px solid rgb(144, 143, 143);
+    }
+}
+@media screen and (width <= 450px) {
+    :root {
+        --size: 65px;
+    }
+    .overlay{
+        border: 6px solid rgb(144,143,143);
+    }
+    .Board{
+        border: 6px solid rgb(144, 143, 143);
+    }
+}

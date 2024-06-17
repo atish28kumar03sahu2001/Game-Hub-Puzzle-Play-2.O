@@ -1,0 +1,75 @@
+.HD{
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 107);
+}
+.HDH1{
+    text-align: center;
+    font-size: 30px;
+    color: rgb(255, 111, 0);
+}
+.ONE{
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 100px 0px 150px 0px;
+}
+.ONEH2 {
+    font-size: 35px;
+    text-align: center;
+    color: rgb(255, 111, 0);
+}
+.ONEH22 {
+    font-size: 30px;
+    text-align: center;
+    color: rgb(255, 111, 0);
+}
+.TWO{
+    /* border: 2px solid black; */
+    margin: 100px 0px 150px 0px;
+}
+.TWOP{
+    margin: 30px 50px 30px 50px;
+    text-align: center;
+    text-wrap: wrap;
+}
+.GMLST{
+    margin: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.LCH{
+    text-decoration: none;
+    color: white;
+    margin: 7px;
+    padding: 7px;
+    background-color: rgb(255, 111, 0);
+    border-radius: 10px;
+    cursor: pointer;
+}
+@media screen and (width <= 501px){
+    .HDH1{
+        font-size: 22px;
+    }
+    .ONEH2{
+        font-size: 25px;
+    }
+    .ONEH22{
+        font-size: 20px;
+    }
+}
+@media screen and (width <= 890px) {
+    .GMLST{
+        margin: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,203 @@
+.MCHD {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgb(238, 95, 95);
+}
+
+.MCH1 {
+    text-align: center;
+    text-wrap: wrap;
+    color: white;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.MainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+.Container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    perspective: 700px;
+}
+
+.Card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 0.3s ease;
+}
+
+.img {
+    width: 100px;
+    height: 70px;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.back {
+    background: url(../Images/grey.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    border: 2px solid white;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    cursor: pointer;
+}
+
+.Card.open {
+    transform: rotateY(180deg);
+}
+
+.Score-Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Score {
+    margin: 15px;
+    font-size: 17px;
+}
+
+.Tries {
+    margin: 15px;
+    font-size: 17px;
+}
+
+.Game-OverScreen {
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100vh;
+    width: 100vw;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Box {
+    max-width: 300px;
+    width: 100%;
+    max-height: 250px;
+    height: 100%;
+    background-color: rgb(150, 70, 70);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.PTR {
+    color: white;
+    text-wrap: wrap;
+    text-align: center;
+    margin: 20px;
+}
+
+.PABTN {
+    border: 2px solid white;
+    border-radius: 20px;
+    outline: none;
+    background: none;
+    background-color: rgb(113, 90, 69);
+    color: white;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.stop-clicking {
+    pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+    .MainContainer {
+        margin: 50px 30px 50px 30px;
+        flex-direction: column;
+    }
+
+    .Container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .img {
+        width: 70px;
+        height: 40px;
+    }
+
+    .Score,
+    .Tries {
+        font-size: 20px;
+    }
+
+    .Box {
+        width: 80%;
+        height: 120px;
+    }
+
+    .PABTN {
+        width: 80px;
+        height: 35px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .MainContainer {
+        margin: 50px;
+        flex-direction: column;
+    }
+
+    .Container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .img {
+        width: 60px;
+        height: 50px;
+    }
+
+    .Score,
+    .Tries {
+        font-size: 18px;
+    }
+
+    .Box {
+        width: 90%;
+        height: 100px;
+    }
+
+    .PABTN {
+        width: 100px;
+        height: 30px;
+    }
+}

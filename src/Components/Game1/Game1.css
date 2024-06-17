@@ -1,0 +1,75 @@
+.GHD{
+    background-color: rgb(118, 164, 118);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.GHDH1{
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    font-weight: 300;
+}
+.GPHD{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.GPP{
+    text-align: center;
+    text-wrap: wrap;
+}
+.PDIV{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.PWD{
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+.PW{
+    border: none;
+    outline: none;
+    background: none;
+    padding: 5px;
+    width: 250px;
+    height: 30px;
+}
+.PWDIV{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.BTN{
+    border: none;
+    outline: none;
+    background: none;
+    background-color: green;
+    width: 100px;
+    height: 40px;
+    color: white;
+    border-radius: 20px;
+    padding: 5px;
+    cursor: pointer;
+}
+.NOTIFY{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.valid{
+    color: rgb(31, 105, 31);
+    text-align: center;
+    margin: 5px;
+}
+.invalid {
+    color: red;
+    text-align: center;
+    margin: 5px;
+}
